@@ -5,7 +5,7 @@
 * We perform CNN-based semantic segmentation on satellite imagery obtained before and after disaster to identify areas of maximal damage.
 * Our work incorporates high-level features including roads,buildings,trees,crops and water. This renders increased flexibility to proposed model over existing approaches.
 * Our experiments show a high correlation between predicted impact areas and human –annotated ground truth labels.
-![banner](https://github.com/GogulaK/Disaster-Impact-Prediction-using-Aerial-Satellite-Imagery/blob/b8824cc99d2c6c1055e5aaf776a2c09f57fd69ca/img_readme.png)!
+![banner](https://github.com/GogulaK/Disaster-Impact-Prediction-using-Aerial-Satellite-Imagery/blob/b8824cc99d2c6c1055e5aaf776a2c09f57fd69ca/img_readme.png)
 ## Dataset
 * The dataset for this project is adapted from a subset of the Spacenet dataset.
 * Low resolution M-band images are used.
