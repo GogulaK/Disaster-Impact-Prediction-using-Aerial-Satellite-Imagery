@@ -10,12 +10,7 @@
 * The dataset for this project is adapted from a subset of the Spacenet dataset.
 * Low resolution M-band images are used.
 * M band(400-1040 nm), 1.24m/pixel, color depth 11 bit.
-* The following features are more relevant for the disaster impact prediction task:
- - Buildings
- - Roads
- - Trees
- - Water
- - Crops
+* The following features are more relevant for the disaster impact prediction task: Buildings, Roads, Trees, Water, Crops.
 
 ## Requirements
 Create a conda environment with the following dependancies:
@@ -25,7 +20,8 @@ Create a conda environment with the following dependancies:
 * Keras
 * numpy
 
-## Training
+## Running the Code
+Preparing data
 * Add the test image to the data/mband/ folder
 * Rename the file to be tested as test.tif in /data/mband folder
 * Make sure the image is square in dimensions
@@ -35,27 +31,25 @@ Create a conda environment with the following dependancies:
 
 Run python predict.py
 
-Perform the same for pre disaster and post disaster image separately
-Store the predicted output of predisaster as result.tif
-Store the predicted output of post disaster as postresult.tif
+Perform the same for pre disaster and post disaster image separately.
+* Store the predicted output of predisaster as result.tif
+* Store the predicted output of post disaster as postresult.tif
 
 Run Python postprocess.py
-- This produces the aggregated presummed.tif and postsummed.tif, diffprepost.tif
-
-Copy the diffprepost.tif,summedpre.tif,summedpost.tif to a new folder (eval_folder)
+* This produces the aggregated presummed.tif and postsummed.tif, diffprepost.tif
+* Copy the diffprepost.tif,summedpre.tif,summedpost.tif to a new folder (eval_folder)
 
 Run python heatmap_to_tif.py 'Foldername' #Run it from the previous folder  
-The heatmap will be stored in the given Foldername.
+* The heatmap will be stored in the given Foldername.
 
-## Evaluation
 Run python evaluation.py
-
-evaluation.py calculates F1_score and the steps are as follows,
+* evaluation.py calculates F1_score and the steps are as follows,
 
 Input to evaluation.py are: diffprepost.tif , corresponding ground truth label.csv (available in sample) 
         
 Note: Metric used => Disaster Impact Index(DII) = |ηPredbefore=1&Predafter=0|grid /  Ngrid |ηPredbefore=1 for entire image|      
-      Based on above metric, Labels will be generated for predicted outputs and the same would be compared against ground truth label(uses the same metric)
+
+Based on above metric, Labels will be generated for predicted outputs and the same would be compared against ground truth label(uses the same metric)
      
 
 
