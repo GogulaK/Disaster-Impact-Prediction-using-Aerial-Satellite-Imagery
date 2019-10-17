@@ -51,5 +51,7 @@ Note: Metric used => Disaster Impact Index(DII) = |ηPredbefore=1&Predafter=0|gr
 
 Based on above metric, Labels will be generated for predicted outputs and the same would be compared against ground truth label(uses the same metric)
      
+## References
 
-
+- From Satellite Imagery to Disaster Insights. Jigar Doshi, Saikat Basu, Guan Pang. 2018. https://arxiv.org/abs/1812.07033.
+- https://github.com/reachsumit/deep-unet-for-satellite-image-segmentation
